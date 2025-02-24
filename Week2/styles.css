@@ -1,0 +1,22 @@
+
+.red {
+  color: #f33;
+}
+.yellow-bg {
+  background: #ffa;
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #77f;
+}
+
+/* In the next two rules, the class attributes must be escaped */
+
+.item\?one {
+  background-color: pink;
+}
+
+.\00003123item {
+  background-color: yellow;
+}
