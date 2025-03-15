@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT-Week-5 Java Script</title>
+    
+    <!--  
+    <script type="module">
+        document.getElementById("btnGetTicket").addEventListener("click", e=>{
+    
+    let age = document.getElementById("txtAge").value;
+    let output = "";
+    
+    if (age < 14){
+        output = "Childs Ticket";
+    }
+    else if (age < 65){
+        output = "Adult Ticket";
+    }
+    else{
+        output = "Travel Free";
+    }
+    
+    document.getElementById("result").innerHTML = output;
+});
+
+document.getElementById("btnCloseBanner").addEventListener("click", e=>{
+    document.getElementById("cookieBanner").style.display = "none";
+});
+
+function reactToEvent(){
+    alert("The button was clicked!");
+}
+
+document.getElementById("btnExample").addEventListener("click", reactToEvent);
+    </script>
+    -->
+</head>
+<body>
+
+    <!--Example Button Actions-->
+    <button id="btnExample">Button Example</button>
+
+
+    <br>
+
+<!--Example Function Calls-->
+
+<input id="txtAge">
+<button id="btnGetTicket">Click Me</button>
+<p id="result"></p>
+
+<br>
+
+<!--Example Hiding/Showing HTML Elements-->
+<div id="cookieBanner">
+    A warning about the use of cookies on this website
+    <button id="btnCloseBanner">X</button>
+</div>
+
+<script src="scripts/myscript.js"></script>   
+
+</body>
+</html>

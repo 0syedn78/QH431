@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  background: rgb(3, 3, 3);
+  top: 0;
+  left: 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.banner {
+  top: 0;
+  left: 0;
+  height: 80vh;
+  background-image: url("../images/banner.jpg");
+  text-align: center;
+  justify-content: center;
+}
+.title {
+  padding: 8rem;
+  flex: auto;
+  position: relative;
+  font-size: 5rem;
+  color: #fff;
+}
+.container {
+  padding-top: 2rem;
+  height: auto;
+  background: #000;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.images {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  width: 550px;
+  height: 350px;
+}
+
+li {
+  list-style: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.sub-title {
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  color: #fff;
+  font-size: large;
+  line-height: 34px;
+}
+#q1 {text-align: center;}
+#q2 {text-align: center; display: none;}
+#q3 {text-align: center; display: none;}
+#secretH3 {text-align: center; display: none;}
+
+.paragraph {
+  padding: 0rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
