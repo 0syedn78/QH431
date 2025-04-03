@@ -1,0 +1,32 @@
+[{
+    "name": "Web Technologies", 
+    "code": "HQO431",
+    "description": "Web technology encompasses the various software tools, programming languages, and frameworks used to build and deploy websites and web applications, enabling interactive and dynamic online experiences.",
+     "img": "images/wt.jpg"
+}, 
+{
+    "name": "Introduction to Databases", 
+    "code": "HQO430",
+     "description": "Databases are a method for storing data in a structured way on a computer, to make it easier to store, search, and work with that data. Data is typically stored in tables in a database. You can visualise each table as having columns, or fields, which hold particular categories of data (e.g. first name), and rows, or records, which hold all of the information about a particular thing (e.g. a customer). With this data, you can run queries, which are basically advanced searches that allow you to sort and filter data. These searches can be saved so you can keep working with the data that fits those criteria, without making unnecessary copies of your data.",
+      "img": "images/db.png"
+}, 
+{
+    "name": "Web Application Development", 
+    "code": "QHO540",
+     "description": "Web application development involves creating interactive programs accessible through a web browser, residing on remote servers and delivered over the internet, unlike traditional software that needs to be downloaded. ",
+      "img": "images/wad.jpg"
+},
+
+{
+    "name": "Object Oriented", 
+    "code": "QHO640",
+     "description": "Course Description Goes Here",
+      "img": "images/oops.png"
+},
+{
+    "name": "Business Intelligencce", 
+    "code": "QHO541",
+     "description": "Course Description Goes Here",
+      "img": "images/bi.png"
+}
+]
