@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+button {
+  width: 150px;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+button:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.5em;
+}
+    </style>
+</head>
+<body>
+    <button id="btnexample">Click here</button>
+    <div id="result"></div>
+
+
+
+
+    <script>
+        document.getElementById("btnexample").addEventListener("click", e=>{
+            fetch("modules.json")
+.then(response => response.json())
+.then(modules => {
+    let output = "";
+    modules.forEach(module => {
+        output += "<p>Module Name: " + module.name + ", Module leader: " + module.leader + "</p>";
+    });
+
+    document.getElementById("result").innerHTML = output;
+});
+});  
+    </script>
+</body>
+</html>

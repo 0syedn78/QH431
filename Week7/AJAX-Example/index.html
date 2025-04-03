@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+button {
+  width: 150px;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+}
+
+button:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.5em;
+}
+
+        
+        </style>
+  </head>
+  <body>
+    <button id="btnexample">Click here</button>
+    <div id="result"></div>
+
+    <button id="btnload">Load Modules</button>
+    <div id="modulesresult"></div>
+
+    <input id="fileupload" type="file" name="fileupload" />
+    <button id="upload-button" onclick="uploadFile()"> Upload </button>
+    <!--
+    
+    <script>
+        document.getElementById("btnexample").addEventListener("click", e=>{
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.addEventListener("load", e => {
+        document.getElementById("result").innerHTML = e.target.responseText
+    });
+
+    xhttp.open("GET", "content.html");
+    xhttp.send();
+});  
+
+document.getElementById("btnload").addEventListener("click", e=>{
+    const xhttp = new XMLHttpRequest();
+
+xhttp.addEventListener("load", e => {
+	const modules = JSON.parse(e.target.responseText);
+
+	let output = "";
+	modules.forEach(module => {
+		output += "<p>Name: " + module.name + ", Leader: " + module.leader + "</p>";
+	});
+
+	document.getElementById("result").innerHTML = output;
+});
+
+xhttp.open("GET", "modules.json");
+xhttp.send();
+});
+    </script>
+    -->
+<script>
+
+async function uploadFile() {
+    let formData = new FormData();           
+    formData.append("file", fileupload.files[0]);
+    await fetch('/upload.php', {
+      method: "POST", 
+      body: formData
+    });    
+    alert('The file has been uploaded successfully.');
+}
+
+    document.getElementById("btnload").addEventListener("click", e=>{
+    fetch("modules.json")
+    .then(response => response.json())
+    .then(modules => {
+        let output = "";
+        modules.forEach(module => {
+            output += "<p>Name: " + module.name + ", leader: " + module.leader + "</p>";
+        });
+
+    document.getElementById("result").innerHTML = output;
+    });
+});
+
+            document.getElementById("btnexample").addEventListener("click", e=>{
+             fetch("content.html")
+          .then(response => response.text())
+      .then(text =>{
+          document.getElementById("result").innerHTML = text;
+      })});
+    </script>
+    
+  </body>
+</html>

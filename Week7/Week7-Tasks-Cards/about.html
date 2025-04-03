@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>About Us</h1>
+    <br /><br />
+    <p>Please select one of the following filters</p>
+    <button class="custom-btn" id="staffBtn">Staff</button> |
+    <button class="custom-btn" id="subjectsBtn">Subjects</button>
+    <p>Please select an option above</p>
+
+    <div id="results"></div>
+
+    <script>
+      document.getElementById("staffBtn").addEventListener("click", (e) => {
+        fetch("staff.json")
+          .then((response) => response.json())
+          .then((staffs) => {
+            let output = '<div class="cards">';
+            staffs.forEach((staff) => {
+              //output += "<p>Staff Name: " + staff.name + ", Module: " + staff.module + "</p>";
+              output +=
+                '<div class="card"> <img src="'+staff.img+'" alt="Avatar" style="width:100%"><h4><b>' +
+                staff.name +
+                "</b></h4>  <p>" +
+                staff.age +
+                "</p><p>" +
+                staff.email +
+                "</p> <p>" +
+                staff.campus +
+                "</p><p>" +
+                staff.module +
+                "  </div>";
+            });
+            output += "</div";
+
+            document.getElementById("results").innerHTML = output;
+          });
+      });
+
+      document.getElementById("subjectsBtn").addEventListener("click", (e) => {
+        fetch("subject.json")
+          .then((response) => response.json())
+          .then((subjects) => {
+            let output = '<div class="cards">';
+            subjects.forEach((subject) => {
+              //output += "<p>S Name: " + staff.name + ", Module: " + staff.module + "</p>";
+              output +=
+                '<div class="card"> <img src="'+subject.img+'" alt="Avatar" style="width:100%"><h4><b>' +
+                subject.name +
+                "</b></h4>  <p>" +
+                subject.code +
+                "</p><p>" +
+                subject.description +
+                "</p> </div>";
+            });
+            output += "</div";
+
+            document.getElementById("results").innerHTML = output;
+          });
+      });
+    </script>
+  </body>
+</html>

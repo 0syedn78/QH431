@@ -1,0 +1,34 @@
+[{
+    "name": "Mark Kenton", 
+    "age": 50,
+    "email": "kenton@solent.ac.uk",
+    "campus": "Manchester",
+    "module": "Introduction to Databases",
+    "img": "mark.jpg"
+}, 
+{
+    "name": "Marwan Radwan", 
+    "age": 55,
+    "email": "radwanm@solent.ac.uk",
+    "campus": "Birmingham",
+    "module": "Web Applications Development",
+    "img": "marwan.jpeg"
+}, 
+{
+    "name": "John Stewart", 
+    "age": 40,
+    "email": "johnsolent.ac.uk",
+    "campus": "London",
+    "module": "Human Comuter Interaction",
+    "img": "john.jpeg"
+},
+{
+    "name": "Marwan Radwan", 
+    "age": 55,
+    "email": "radwanm@solent.ac.uk",
+    "campus": "Birmingham",
+    "module": "Web Applications Development",
+    "img": "marwan.jpeg"
+}
+
+]
