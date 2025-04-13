@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <h1>I am the FAQ File</h1>
+  <div>
+  <% faqs.forEach(row => { %>
+      <p> 
+       <%= q=row.question %> 
+       </p>
+        <p>
+        <%= q=row.answer %>
+        </p>
+            <hr>
+    <% }) %>
+    </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
