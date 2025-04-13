@@ -1,0 +1,267 @@
+
+body {font-family: Arial, Helvetica, sans-serif;
+ 
+}
+    input[type=text], select, textarea {
+      width: 70%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    input[type=email], select, textarea {
+      width: 70%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    .custom-btn {
+        width: 130px;
+        height: 40px;
+        background-color: blue;;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+          7px 7px 20px 0px rgba(0,0,0,.1),
+          4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+       }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+  overflow: hidden;
+  
+  
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    background-color: #90b4ea;
+    width: 150px;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: grey;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+   
+h1 {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    
+    font-size: 24px;
+  }
+  
+  .social-icons a:hover {
+    color: #00aced; /* Customize the hover color */
+  }
+  .faq-container {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 10px auto; /* Center the container and add vertical spacing */
+    padding: 10px;
+    font-family: 'Arial, sans-serif';
+    color: #333; /* Base text color */
+  }
+  
+  /* Style for the main title */
+  .faq-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Dark blue color for the title */
+  }
+  
+  /* Style for each FAQ item */
+  .faq-item {
+    border-bottom: 1px solid #ddd; /* Light gray border between items */
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  /* Style for the question buttons */
+  .faq-question {
+    background-color: #ecf0f1; /* Light gray background */
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease; /* Smooth background transition on hover */
+  }
+  
+  /* Hover effect for question buttons */
+  .faq-question:hover {
+    background-color: #d0d7de; /* Slightly darker gray on hover */
+  }
+  
+  /* Style for the arrow icon */
+  .faq-question .arrow {
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease; /* Smooth rotation transition */
+  }
+  
+  /* Rotate the arrow when the question is active (expanded) */
+  .faq-question.active .arrow {
+    transform: rotate(180deg); /* Rotate arrow 180 degrees */
+  }
+  
+  /* Style for the answer sections */
+  .faq-answer {
+    max-height: 0; /* Initially hide the answer */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Smooth transition for expanding */
+    background-color: #fff; /* White background for answers */
+  }
+  
+  /* Style for the answer text */
+  .faq-answer p {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5; /* Increase line height for better readability */
+    color: #555; /* Slightly lighter text color for answers */
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+    padding: 20px; /* Add padding around the container */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+.card {
+    background-color: rgb(204, 211, 228);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .card button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .card button:hover {
+    background-color: #005bb5;
+   
+  }
+
+  .container2 {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+
+  /* Optional: Background colors for better visibility */
+.left-column {
+  background-color: #f4f4f4;
+}
+
+.right-column {
+  background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+}
+  

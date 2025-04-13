@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="card-container">
+            <% rows.forEach(q => { %>
+                <div class="card-container">
+                    <div class="card">
+                      <img src="<%= q.image %>" alt="Dynamic Card Image">
+
+                        <p><%= q.product_name %> </p>
+                        <p><%= q.description %> </p>
+                        <p><%= q.price %> </p>
+                        <p><%= q.quantity %> </p>
+                        <p><%= q.image %> </p>
+                        <button>Order</button>
+                    </div>
+                </div>
+            <% }) %>
+            </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
