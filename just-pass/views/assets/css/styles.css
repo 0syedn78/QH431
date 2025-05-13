@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* General styling for the navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8; /* Light background */
+    padding: 10px 20px;
+  }
+  
+  /* Logo styling */
+  .navbar .logo {
+    width: 250px; /* Adjust as needed */
+    height: auto;
+  }
+  
+  /* Menu styling */
+  .navbar ul {
+    list-style: none;
+    gap: 1px;
+  }
+  
+  .navbar ul li {
+    
+    list-style-type: none;
+    float: left;
+    background-color: #90b4ea;
+    width: 150px;
+       
+    
+  }
+  
+  .navbar ul li a {
+    display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+    
+  /* Social icons container */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Align icons nicely */
+  }
+  
+  /* Individual icons */
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f8f8; /* Light background */
+    color: #333; /* Default icon color */
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .social-icons a:hover {
+    background-color: #007bff; /* Highlight color */
+    color: #fff; /* Change icon color */
+  }
+  
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards */
+    padding: 20px; /* Add padding around the container */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+.card {
+    background-color: rgb(204, 211, 228);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .card button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .card button:hover {
+    background-color: #005bb5;
+   
+  }
+
+  input[type=text], select, textarea {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=email], select, textarea {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .custom-btn {
+      width: 130px;
+      height: 40px;
+      background-color: #005bb5;
+      color: #fff;
+      border-radius: 5px;
+      padding: 10px 25px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+        7px 7px 20px 0px rgba(0,0,0,.1),
+        4px 4px 5px 0px rgba(0,0,0,.1);
+      outline: none;
+     }
+  
+      

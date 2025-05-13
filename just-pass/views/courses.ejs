@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head'); %>
+    </head>
+
+<body class="container">
+        <header><%- include('partials/header'); %></header>
+        <main>
+            <div class="card-container">
+                    <% rows.forEach(record => { %>
+                        <div class="card-container">
+                            <div class="card">
+                              <img src="<%= record.image %>" alt="Dynamic Card Image">
+        
+                                <p><%= record.course_id %> </p>
+                                <p><%= record.course_name %> </p>
+                                <p><%= record.department %> </p>
+                                <p><%= record.instructor_id %> </p>
+                                <p><%= record.credits %> </p>
+                                <p><%= record.semester %> </p>
+                                <button>More Info</button>
+                            </div>
+                        </div>
+                    <% }) %>
+                    </div>
+        </main>
+        <footer><%- include('partials/footer'); %></footer> 
+</body>
+</html>

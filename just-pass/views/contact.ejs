@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body class="container">
+  <header>
+    <%- include('partials/header'); %>
+  </header>
+  <div id ="resultResp" style="text-align: center;"></div>
+  <main id="main">
+  <h1>Contact Us</h1>
+  <form id="myForm">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Your First Name.." required>
+    <br>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Your Last Name.." required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="palestine">Palestine</option>
+      <option value="uk">United Kingdom</option>
+      <option value="usa">USA</option>
+    </select>
+    <br>
+    <label for="subject" style="position: relative; top: -5vh;">Subject:</label>
+    <textarea id="subject" name="subject" placeholder="Message Subject" required></textarea>
+    <br>
+    <label for="message" style="position: relative; top: -12vh;">Message</label>
+    <textarea id="message" name="message" placeholder="Write Your Message Here ...." style="height:200px" required></textarea>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+</main>
+<footer>
+  <%- include('partials/footer'); %>
+</footer>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(event.target); // Grab form data
+  const data = Object.fromEntries(formData.entries()); // Convert to JSON format
+
+  try {
+    const response = await fetch('/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+if (response.status == 200 || response.status == 201) {
+  console.log("Response Received ",response.ok, response.status);
+  document.getElementById("main").style.display = "none";
+        document.getElementById(`resultResp`).innerHTML = `<span style="color:green;  ">THANK YOU, FORM ADDED SUCCESSFULLY!</span>`;
+    } else {
+        let error = await response.json();
+        document.getElementById("main").style.display = "none";
+        document.getElementById(`resultResp`).innerHTML = `<span style="color:red; text-align: center;">${error.error}</span>`;
+    }
+  } catch (error) {
+    //console.error("Error:", error);
+  }
+});
+
+</script>
+</body>
+</html>
